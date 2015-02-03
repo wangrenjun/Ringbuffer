@@ -2,11 +2,9 @@
 Ringbuffer
 ==========
 
-Yet another Ringbuffer implementation for buffering I/O streams
-
 用于缓冲I/O流数据的[循环队列](http://en.wikipedia.org/wiki/Circular_buffer)，参照了linux [kfifo](http://lxr.free-electrons.com/source/include/linux/kfifo.h)；
 
-这里的实现不是所有连接共享同一Ringbuffer的实现，如[这里](http://blog.codingnow.com/2012/02/ring_buffer.html)提到的及其[实现](http://blog.codingnow.com/2012/04/mread.html)，这里的实现类似于Muduo [Buffer](http://blog.csdn.net/solstice/article/details/6329080)的设计，每个连接两个buffer，一个读一个写。
+这里的实现不是所有连接共享同一Ringbuffer，如[这篇文章](http://blog.codingnow.com/2012/02/ring_buffer.html)及其[实现](http://blog.codingnow.com/2012/04/mread.html)，这里的实现类似于Muduo [Buffer](http://blog.csdn.net/solstice/article/details/6329080)的设计，每个连接两个buffer，一个负责读一个负责写。
 
 rb_t
 ----
