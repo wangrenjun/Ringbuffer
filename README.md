@@ -17,7 +17,7 @@ rb_t
 
 消费过程:
 
-* 首先从对应的buffer里获取(`rb_consumer_peek`)一段己使用缓存，然后处理这段缓存，最后将这段缓存设置为空闲(`rb_produced`)；
+* 首先从对应的buffer里获取(`rb_consumer_peek`)一段己使用缓存，然后处理这段缓存，最后将这段缓存设置为空闲(`rb_consumed`)；
 
 在网络事件中:
 
